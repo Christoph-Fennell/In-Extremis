@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* ─── Brand Tokens ─────────────────────────────────────── */
+:root {
+  --ink:   #0C0C0D;
+  --bone:  #ECE6D8;
+  --blood: #8A1815;
+  --paper: #F4EFE3;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'EB Garamond', Georgia, serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  --nav-height: 72px;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* ─── Reset ────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--ink);
+  color: var(--bone);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ─── Typography Scale ─────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(3.5rem, 9vw, 8rem); }
+h2 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+h3 { font-size: clamp(1.6rem, 3vw, 2.5rem); }
+h4 { font-size: clamp(1.2rem, 2vw, 1.6rem); }
+
+p { font-size: clamp(1rem, 1.5vw, 1.15rem); }
+
+/* ─── Labels (JetBrains Mono) ──────────────────────────── */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blood);
+}
+
+.label--bone {
+  color: var(--bone);
+  opacity: 0.5;
+}
+
+/* ─── Buttons ──────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  background: var(--blood);
+  color: var(--bone);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: #6e1210;
+  box-shadow: 0 6px 20px rgba(138, 24, 21, 0.35);
+  transform: translateY(-1px);
+}
+
+/* ─── Rule / Divider ───────────────────────────────────── */
+.rule {
+  width: 3rem;
+  height: 1px;
+  background: var(--blood);
+  display: block;
+  margin: 1.5rem 0;
+}
+
+/* ─── Sections ─────────────────────────────────────────── */
+.section-ink   { background: var(--ink);   color: var(--bone); }
+.section-bone  { background: var(--bone);  color: var(--ink);  }
+.section-paper { background: var(--paper); color: var(--ink);  }
+
+/* ─── Container ────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 5vw, 4rem);
+}
+
+/* ─── Fade-in Animation ────────────────────────────────── */
+@keyframes fadeRise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-rise {
+  opacity: 0;
+  animation: fadeRise 0.9s var(--ease-out-expo) forwards;
+}
+
+.fade-rise-1 { animation-delay: 0.15s; }
+.fade-rise-2 { animation-delay: 0.3s;  }
+.fade-rise-3 { animation-delay: 0.5s;  }
+.fade-rise-4 { animation-delay: 0.7s;  }
+
+/* Intersection-triggered */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.85s var(--ease-out-expo), transform 0.85s var(--ease-out-expo);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Links ────────────────────────────────────────────── */
+a {
+  color: var(--blood);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ─── Selection ────────────────────────────────────────── */
+::selection {
+  background: var(--blood);
+  color: var(--bone);
+}

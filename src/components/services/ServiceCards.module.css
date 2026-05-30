@@ -1,0 +1,89 @@
+.section {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ── Card ── */
+.card {
+  padding: clamp(2rem, 4vw, 2.75rem) clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid rgba(12, 12, 13, 0.1);
+  margin: -1px 0 0 -1px; /* Shared borders */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition:
+    background 0.25s ease,
+    opacity 0.85s var(--ease-out-expo),
+    transform 0.85s var(--ease-out-expo);
+}
+
+.card:hover {
+  background: rgba(138, 24, 21, 0.04);
+}
+
+/* ── Card top: number + rule ── */
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.number {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--blood);
+  flex-shrink: 0;
+}
+
+.cardLine {
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: var(--blood);
+  opacity: 0.25;
+}
+
+/* ── Card title ── */
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.15;
+  margin: 0.25rem 0 0;
+
+  /* Override h3 from global */
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+}
+
+/* ── Card body ── */
+.cardBody {
+  font-family: var(--font-body);
+  font-size: 0.97rem;
+  line-height: 1.7;
+  color: var(--ink);
+  opacity: 0.75;
+  flex: 1;
+
+  /* Override p from global */
+  font-size: 0.97rem;
+}

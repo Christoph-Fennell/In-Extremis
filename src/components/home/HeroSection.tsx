@@ -1,0 +1,78 @@
+'use client';
+
+import Link from 'next/link';
+import styles from './HeroSection.module.css';
+
+/**
+ * MEDIA NOTES:
+ * - Hero video: place your looping mp4 at /public/video/hero.mp4
+ *   and a poster image at /public/images/hero-poster.jpg
+ * - A static fallback at /public/images/hero-still.jpg is shown on mobile
+ * - The overlay keeps text legible over any dark media
+ */
+export default function HeroSection() {
+  return (
+    <section className={styles.hero} aria-label="Hero">
+      {/* ── Media layer ── */}
+      <div className={styles.media} aria-hidden="true">
+        {/*
+          REPLACE THIS PLACEHOLDER with your actual <video> or <Image> tag.
+
+          Example with video:
+          <video
+            className={styles.video}
+            src="/video/hero.mp4"
+            poster="/images/hero-poster.jpg"
+            autoPlay muted loop playsInline
+            aria-hidden="true"
+          />
+
+          Example with static image (next/image):
+          <Image
+            src="/images/hero-still.jpg"
+            alt=""
+            fill
+            priority
+            className={styles.videoFill}
+            style={{ objectFit: 'cover' }}
+          />
+        */}
+        <div className={styles.placeholder}>
+          {/* Placeholder: replace with video or image */}
+        </div>
+      </div>
+
+      {/* ── Gradient overlay ── */}
+      <div className={styles.overlay} aria-hidden="true" />
+
+      {/* ── Content ── */}
+      <div className={styles.content}>
+        <p className={`label fade-rise fade-rise-1 ${styles.eyebrow}`}>
+          In Extremis Consulting
+        </p>
+
+        <h1 className={`fade-rise fade-rise-2 ${styles.headline}`}>
+          The point of<br />the spear.
+        </h1>
+
+        <p className={`fade-rise fade-rise-3 ${styles.subhead}`}>
+          Strategic advisory for the defense, firearms, and aerospace industries.
+          Two decades of hard-won experience, applied to the problems that decide
+          whether a company wins or fades.
+        </p>
+
+        <div className={`fade-rise fade-rise-4 ${styles.cta}`}>
+          <Link href="/services" className="btn-primary">
+            Work With Us <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </div>
+
+      {/* ── Scroll indicator ── */}
+      <div className={`fade-rise fade-rise-4 ${styles.scrollHint}`} aria-hidden="true">
+        <span className={styles.scrollLine} />
+        <span className={styles.scrollLabel}>Scroll</span>
+      </div>
+    </section>
+  );
+}

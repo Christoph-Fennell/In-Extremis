@@ -1,0 +1,178 @@
+.section {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  border-top: 1px solid rgba(236, 230, 216, 0.08);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .inner {
+    grid-template-columns: 320px 1fr;
+    gap: 5rem;
+  }
+}
+
+/* ── Heading block ── */
+.title {
+  color: var(--bone);
+  margin: 0.5rem 0 1.25rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.sub {
+  color: var(--bone);
+  opacity: 0.6;
+  font-size: 0.97rem;
+  line-height: 1.65;
+}
+
+/* ── Form ── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* ── Row ── */
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+@media (min-width: 540px) {
+  .row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── Field ── */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fieldLabel {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bone);
+  opacity: 0.5;
+}
+
+.required {
+  color: var(--blood);
+  opacity: 1;
+  margin-left: 0.15em;
+}
+
+.optional {
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+  text-transform: none;
+}
+
+.input,
+.textarea {
+  background: rgba(236, 230, 216, 0.05);
+  border: 1px solid rgba(236, 230, 216, 0.12);
+  border-radius: 2px;
+  padding: 0.85rem 1rem;
+  color: var(--bone);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: rgba(138, 24, 21, 0.6);
+  background: rgba(236, 230, 216, 0.07);
+}
+
+.inputError {
+  border-color: rgba(138, 24, 21, 0.55) !important;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* ── Errors ── */
+.errorMsg {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: #c0443f;
+  text-transform: uppercase;
+}
+
+.globalError {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: #c0443f;
+  line-height: 1.6;
+}
+
+.globalError a {
+  color: #c0443f;
+  text-decoration: underline;
+}
+
+/* ── Honeypot ── */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  tab-index: -1;
+}
+
+/* ── Success state ── */
+.successState {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2.5rem 0;
+}
+
+.successIcon {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--blood);
+  line-height: 1;
+}
+
+.successTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: var(--bone);
+
+  /* Override h3 global */
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.successBody {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--bone);
+  opacity: 0.6;
+}

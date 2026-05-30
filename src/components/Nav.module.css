@@ -1,0 +1,222 @@
+/* ─── Nav shell ──────────────────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  transition: background 0.35s ease, border-color 0.35s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.transparent {
+  background: transparent;
+}
+
+.solid {
+  background: var(--ink);
+  border-bottom-color: rgba(236, 230, 216, 0.08);
+}
+
+.menuActive {
+  background: transparent;
+  border-bottom-color: transparent;
+}
+
+.inner {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 5vw, 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ─── Logo / Wordmark ────────────────────────────────────── */
+.logoLink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.wordmark {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--bone);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+.wordmarkCross {
+  color: var(--blood);
+  font-size: 1rem;
+  position: relative;
+  top: -1px;
+}
+
+.wordmarkSub {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+  color: var(--bone);
+  opacity: 0.6;
+  display: none; /* Show on wider screens */
+}
+
+@media (min-width: 480px) {
+  .wordmarkSub {
+    display: inline;
+    align-self: center;
+    margin-left: 0.35rem;
+    position: relative;
+    top: -1px;
+  }
+}
+
+/* ─── Desktop nav links ──────────────────────────────────── */
+.desktopLinks {
+  display: none;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .desktopLinks {
+    display: flex;
+  }
+}
+
+.navLink {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--bone);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 1px;
+  background: var(--blood);
+  transition: width 0.25s var(--ease-out-expo);
+}
+
+.navLink:hover,
+.navLink.active {
+  opacity: 1;
+  color: var(--bone);
+  text-decoration: none;
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+  width: 100%;
+}
+
+/* ─── Hamburger ──────────────────────────────────────────── */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 110;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.bar {
+  display: block;
+  width: 28px;
+  height: 1.5px;
+  background: var(--bone);
+  transition: transform 0.3s var(--ease-in-out), opacity 0.3s ease, width 0.3s ease;
+  transform-origin: left center;
+}
+
+.menuActive .bar:nth-child(1) { transform: rotate(45deg) translate(1px, -1px); }
+.menuActive .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.menuActive .bar:nth-child(3) { transform: rotate(-45deg) translate(1px, 1px); }
+
+/* ─── Mobile overlay ─────────────────────────────────────── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.overlayOpen {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.overlayLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.overlayLink {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 12vw, 4rem);
+  font-weight: 600;
+  color: var(--bone);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.overlayLink:hover {
+  color: var(--blood);
+  text-decoration: none;
+}
+
+.overlaySub {
+  position: absolute;
+  bottom: 2.5rem;
+}
+
+.overlayMotto {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--blood);
+  opacity: 0.8;
+}

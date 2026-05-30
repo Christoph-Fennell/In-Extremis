@@ -1,0 +1,200 @@
+.footer {
+  background: var(--ink);
+  color: var(--bone);
+  border-top: 1px solid rgba(236, 230, 216, 0.1);
+  padding-top: 4rem;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 5vw, 4rem) 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ── Brand zone ── */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.swordMark {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--blood);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.wordmark {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.wordmarkName {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--bone);
+  letter-spacing: 0.02em;
+}
+
+.wordmarkSub {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+  color: var(--bone);
+  opacity: 0.45;
+}
+
+.motto {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--blood);
+  margin-top: 0.25rem;
+}
+
+/* ── Zone labels ── */
+.zoneLabel {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--bone);
+  opacity: 0.4;
+  margin-bottom: 1.15rem;
+  /* Override h3 reset */
+  font-size: 0.65rem;
+  line-height: 1;
+}
+
+/* ── Contact zone ── */
+.contactList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.contactLink {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--bone);
+  opacity: 0.75;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.contactLink:hover {
+  color: var(--blood);
+  opacity: 1;
+  text-decoration: none;
+}
+
+.location {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--bone);
+  opacity: 0.5;
+}
+
+/* ── Social zone ── */
+.socialList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--bone);
+  opacity: 0.6;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.socialLink:hover {
+  color: var(--blood);
+  opacity: 1;
+  text-decoration: none;
+}
+
+.footerNav {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.footerNavLink {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--bone);
+  opacity: 0.4;
+  text-decoration: none;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.footerNavLink:hover {
+  opacity: 1;
+  color: var(--blood);
+  text-decoration: none;
+}
+
+/* ── Bottom bar ── */
+.bottom {
+  border-top: 1px solid rgba(236, 230, 216, 0.08);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem clamp(1.25rem, 5vw, 4rem);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--bone);
+  opacity: 0.35;
+  flex-wrap: wrap;
+}
+
+.bottomDivider {
+  opacity: 0.5;
+}
+
+.bottomLink {
+  color: var(--bone);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.bottomLink:hover {
+  color: var(--blood);
+  text-decoration: none;
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://in-extremis.com/sitemap.xml
