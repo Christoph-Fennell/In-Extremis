@@ -12,7 +12,7 @@ export default function FounderBio() {
 
         {/* ── Portrait ── */}
         <div className={`reveal ${styles.portrait}`} aria-hidden="true">
-          {/*
+          {
             REPLACE with founder portrait:
             <Image
               src="/images/chase-portrait.jpg"
@@ -20,10 +20,7 @@ export default function FounderBio() {
               fill
               style={{ objectFit: 'cover', objectPosition: 'top center' }}
             />
-          */}
-          <div className={styles.portraitPlaceholder}>
-            <span>Portrait — /public/images/chase-portrait.jpg</span>
-          </div>
+          }
         </div>
 
         {/* ── Bio copy ── */}
