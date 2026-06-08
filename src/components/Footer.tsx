@@ -4,7 +4,7 @@ import styles from './Footer.module.css';
 const socialLinks = [
   { label: 'LinkedIn',  href: 'https://linkedin.com',  icon: LinkedInIcon  },
   { label: 'Instagram', href: 'https://instagram.com', icon: InstagramIcon },
-  { label: 'X',         href: 'https://x.com',         icon: XIcon         },
+  { label: 'X',         href: 'https://x.com/inextremisbis?s=11',         icon: XIcon         },
   { label: 'YouTube',   href: 'https://youtube.com',   icon: YouTubeIcon   },
 ];
 
