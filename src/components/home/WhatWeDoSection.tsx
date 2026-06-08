@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useRef } from 'react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import styles from './WhatWeDoSection.module.css';
