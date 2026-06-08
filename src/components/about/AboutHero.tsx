@@ -11,17 +11,16 @@ export default function AboutHero() {
     <section className={styles.hero} aria-label="About">
       {/* ── Full-bleed image ── */}
       <div className={styles.media} aria-hidden="true">
-        {/*
+        {
           REPLACE with:
           <Image
-            src="/images/about-hero.jpg"
+            src="/images/about-banner.jpg"
             alt="Chase Welch — In Extremis Consulting"
             fill
             priority
             style={{ objectFit: 'cover', objectPosition: 'top center' }}
           />
-        */}
-        <div className={styles.mediaPlaceholder} />
+        }
       </div>
       <div className={styles.overlay} aria-hidden="true" />
 
