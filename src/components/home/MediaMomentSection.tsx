@@ -16,17 +16,15 @@ export default function MediaMomentSection() {
     <section className={styles.section} ref={sectionRef} aria-label="Built from inside the industry">
       {/* ── Background media ── */}
       <div className={styles.media} aria-hidden="true">
-        {/*
-          REPLACE with:
+        {
           <Image
-            src="/images/media-moment.jpg"
+            src="/images/bottom_banner.jpg"
             alt=""
             fill
             priority={false}
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
-        */}
-        <div className={styles.mediaPlaceholder} />
+        }
       </div>
 
       {/* ── Overlay ── */}
