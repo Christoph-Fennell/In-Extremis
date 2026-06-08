@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './AboutHero.module.css';
 
 /**
@@ -12,7 +13,6 @@ export default function AboutHero() {
       {/* ── Full-bleed image ── */}
       <div className={styles.media} aria-hidden="true">
         {
-          REPLACE with:
           <Image
             src="/images/about-banner.jpg"
             alt="Chase Welch — In Extremis Consulting"
