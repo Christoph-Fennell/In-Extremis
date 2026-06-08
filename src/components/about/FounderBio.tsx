@@ -13,7 +13,6 @@ export default function FounderBio() {
         {/* ── Portrait ── */}
         <div className={`reveal ${styles.portrait}`} aria-hidden="true">
           {
-            REPLACE with founder portrait:
             <Image
               src="/images/chase-portrait.jpg"
               alt="Chase Welch, founder of In Extremis Consulting"
