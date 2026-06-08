@@ -15,7 +15,7 @@ export default function AboutHero() {
       <div className={styles.media} aria-hidden="true">
         {
           <Image
-            src="/images/about-banner.jpeg"
+            src="/images/services-banner.jpeg"
             alt="Chase Welch — In Extremis Consulting"
             fill
             priority
