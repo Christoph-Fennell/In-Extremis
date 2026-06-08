@@ -15,19 +15,7 @@ export default function HeroSection() {
     <section className={styles.hero} aria-label="Hero">
       {/* ── Media layer ── */}
       <div className={styles.media} aria-hidden="true">
-        {/*
-          REPLACE THIS PLACEHOLDER with your actual <video> or <Image> tag.
-
-          Example with video:
-          <video
-            className={styles.video}
-            src="/video/hero.mp4"
-            poster="/images/hero-poster.jpg"
-            autoPlay muted loop playsInline
-            aria-hidden="true"
-          />
-
-          Example with static image (next/image):
+        {
           <Image
             src="/images/hero-still.jpg"
             alt=""
@@ -36,10 +24,7 @@ export default function HeroSection() {
             className={styles.videoFill}
             style={{ objectFit: 'cover' }}
           />
-        */}
-        <div className={styles.placeholder}>
-          {/* Placeholder: replace with video or image */}
-        </div>
+        }
       </div>
 
       {/* ── Gradient overlay ── */}

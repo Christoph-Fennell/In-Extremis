@@ -46,8 +46,7 @@ export default function WhatWeDoSection() {
 
         {/* ── Right: media ── */}
         <div className={`reveal ${styles.mediaBlock}`} style={{ transitionDelay: '0.35s' }} aria-hidden="true">
-          {/*
-            REPLACE with your image:
+          {
             <Image
               src="/images/what-we-do.jpg"
               alt="In Extremis Consulting field work"
@@ -55,12 +54,7 @@ export default function WhatWeDoSection() {
               style={{ objectFit: 'cover' }}
             />
 
-            Or secondary video:
-            <video src="/video/secondary.mp4" autoPlay muted loop playsInline />
-          */}
-          <div className={styles.mediaPlaceholder}>
-            <span className={styles.mediaPlaceholderText}>Media — replace with image or video</span>
-          </div>
+          }
         </div>
 
       </div>
