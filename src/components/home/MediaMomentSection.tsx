@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+import Link from 'next/link';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import styles from './MediaMomentSection.module.css';
 
