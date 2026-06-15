@@ -19,6 +19,9 @@ const logos: LogoItem[] = [
   { name: 'Client 4', src: '/images/logos/GBRS_Group_idXGaZ4sM6_2.jpeg', width: 200, height: 90 },
   { name: 'Client 5', src: '/images/logos/Midwest_Industries_idHkRLSHMW_0.jpeg', width: 200, height: 90 },
   { name: 'Client 6', src: '/images/logos/Aimpoint_idNEOQKb_j_0.png', width: 200, height: 90 },
+  { name: 'Client 7', src: '/images/logos/Genesis_Arms_idUm8MTAPu_1.png', width: 200, height: 90 },
+  { name: 'Client 8', src: '/images/logos/idJb1-CMvA_logos.png', width: 200, height: 90 },
+  { name: 'Client 9', src: '/images/logos/idqHfeLLxT_logos.png', width: 200, height: 90 },
 ];
 // ────────────────────────────────────────────────────────────
 
