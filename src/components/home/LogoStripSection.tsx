@@ -23,7 +23,7 @@ type LogoItem = {
 
 // ── EDIT THIS ARRAY to add real client logos ───────────────
 const logos: LogoItem[] = [
-  { name: 'Client 1', src: '/images/logos/Colt_idEnFdjWdE_0.png', width: 160, height: 48 },
+  { name: 'Client 1', src: '/images/logos/Colt_idmLsNB0xV_3.jpeg', width: 160, height: 48 },
   { name: 'Client 2', src: '/images/logos/client-2.svg', width: 160, height: 48 },
   { name: 'Client 3', src: '/images/logos/client-3.svg', width: 160, height: 48 },
   { name: 'Client 4', src: '/images/logos/client-4.svg', width: 160, height: 48 },
