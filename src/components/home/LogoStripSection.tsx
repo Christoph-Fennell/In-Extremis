@@ -28,7 +28,7 @@ const logos: LogoItem[] = [
   { name: 'Client 3', src: '/images/logos/hesco_logo.jpg', width: 160, height: 48 },
   { name: 'Client 4', src: '/images/logos/GBRS_Group_idgdVDrzmQ_0.png', width: 160, height: 48 },
   { name: 'Client 5', src: '/images/logos/Midwest_Industries_idHkRLSHMW_0.jpeg', width: 160, height: 48 },
-  { name: 'Client 6', src: '/images/logos/client-6.svg', width: 160, height: 48 },
+  { name: 'Client 6', src: '/images/logos/Aimpoint_idNEOQKb_j_0.png', width: 160, height: 48 },
 ];
 // ──────────────────────────────────────────────────────────
 
