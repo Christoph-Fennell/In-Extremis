@@ -26,7 +26,7 @@ const logos: LogoItem[] = [
   { name: 'Client 1', src: '/images/logos/Colt_idmLsNB0xV_3.jpeg', width: 160, height: 48 },
   { name: 'Client 2', src: '/images/logos/Agilite Logo.png', width: 160, height: 48 },
   { name: 'Client 3', src: '/images/logos/hesco_logo.jpg', width: 160, height: 48 },
-  { name: 'Client 4', src: '/images/logos/client-4.svg', width: 160, height: 48 },
+  { name: 'Client 4', src: '/images/logos/GBRS_Group_idgdVDrzmQ_0.png', width: 160, height: 48 },
   { name: 'Client 5', src: '/images/logos/client-5.svg', width: 160, height: 48 },
   { name: 'Client 6', src: '/images/logos/client-6.svg', width: 160, height: 48 },
 ];
