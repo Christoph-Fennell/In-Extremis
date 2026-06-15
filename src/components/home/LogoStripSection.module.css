@@ -9,68 +9,106 @@
   margin-bottom: 3rem;
 }
 
-.grid {
+/* ── Carousel wrapper ── */
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ── Logo track ── */
+.track {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem 2rem;
-  align-items: center;
-  justify-items: center;
+  gap: 1.5rem;
+  flex: 1;
+  min-height: 80px;
 }
 
-@media (min-width: 540px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 640px) {
+  .track {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media (min-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1rem;
-  }
-}
-
-/* ── Logo box ── */
+/* ── Individual logo box ── */
 .logoBox {
-  width: 100%;
-  max-width: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  opacity: 0.45;
+  padding: 1.25rem;
+  border: 1px solid rgba(236, 230, 216, 0.07);
   filter: grayscale(1);
-  transition: opacity 0.3s ease, filter 0.3s ease;
+  opacity: 0.45;
+  transition: filter 0.3s ease, opacity 0.3s ease, border-color 0.3s ease;
+  animation: fadeIn 0.45s ease forwards;
 }
 
 .logoBox:hover {
-  opacity: 0.85;
   filter: grayscale(0);
+  opacity: 0.9;
+  border-color: rgba(236, 230, 216, 0.15);
 }
 
-/* ── Real logo images ── */
 .logoBox img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 48px;
+  width: auto;
   height: auto;
-  max-height: 50px;
   object-fit: contain;
 }
 
-/* ── Placeholder ── */
-.logoPlaceholder {
-  width: 100%;
-  height: 48px;
-  border: 1px dashed rgba(236, 230, 216, 0.15);
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 0.45; transform: translateY(0); }
+}
+
+/* ── Nav buttons ── */
+.navBtn {
+  background: none;
+  border: 1px solid rgba(236, 230, 216, 0.12);
+  color: var(--bone);
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-mono);
-  font-size: 0.55rem;
-  letter-spacing: 0.1em;
-  color: var(--bone);
-  opacity: 0.3;
-  text-transform: uppercase;
-  border-radius: 1px;
-  white-space: nowrap;
-  padding: 0 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0.4;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  border-radius: 2px;
+}
+
+.navBtn:hover {
+  opacity: 1;
+  border-color: var(--blood);
+  color: var(--blood);
+}
+
+/* ── Dot indicators ── */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--bone);
+  opacity: 0.2;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.dotActive {
+  background: var(--blood);
+  opacity: 1;
+  transform: scale(1.3);
 }
