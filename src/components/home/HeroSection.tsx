@@ -18,7 +18,7 @@ export default function HeroSection() {
       <div className={styles.media} aria-hidden="true">
         {
           <Image
-            src="/images/Screenshot 2026-06-15 at 3.08.45 PM.png"
+            src="/images/51536F14-ADDE-4A56-8D98-C7D50CC95450_1_201_a.jpeg"
             alt=""
             fill
             priority
