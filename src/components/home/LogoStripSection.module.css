@@ -22,7 +22,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   flex: 1;
-  min-height: 80px;
+  min-height: 120px;
 }
 
 @media (min-width: 640px) {
@@ -36,12 +36,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.25rem;
+  padding: 0.75rem;
   border: 1px solid rgba(236, 230, 216, 0.07);
   filter: grayscale(1);
-  opacity: 0.45;
+  opacity: 0.55;
   transition: filter 0.3s ease, opacity 0.3s ease, border-color 0.3s ease;
   animation: fadeIn 0.45s ease forwards;
+  min-height: 120px;
 }
 
 .logoBox:hover {
@@ -52,7 +53,7 @@
 
 .logoBox img {
   max-width: 100%;
-  max-height: 48px;
+  max-height: 90px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -60,7 +61,7 @@
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 0.45; transform: translateY(0); }
+  to   { opacity: 0.55; transform: translateY(0); }
 }
 
 /* ── Nav buttons ── */
