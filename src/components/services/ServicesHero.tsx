@@ -17,7 +17,7 @@ export default function ServicesHero() {
       <div className={styles.media} aria-hidden="true">
         {
           <Image
-            src="/images/Untitled-16.jpg"
+            src="/images/Midwest_Industries_idSSq7H7H1_1.jpeg"
             alt=""
             fill
             priority
