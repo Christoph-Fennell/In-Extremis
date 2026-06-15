@@ -35,30 +35,30 @@ export default function FounderBio() {
 
           <div className={`reveal ${styles.bodyText}`} style={{ transitionDelay: '0.25s' }}>
             <p>
-              In Extremis Consulting was founded to formalize, under a single banner, two decades
-              of cross-domain work in the defense and firearms industries.
+              In Extremis Consulting was founded to formalize, under a single banner, 
+              two decades of cross-domain work in the defense and firearms industries.
+
             </p>
             <p>
-              The firm is led by Chase Welch, a United States Marine Corps combat veteran who
-              served with 1st Battalion, 6th Marines and deployed twice to Afghanistan as an
-              infantry squad leader. After active service, he spent more than a decade as a contract
-              instructor supporting the Defense Intelligence Agency, Marine Corps Special
-              Operations Command, Naval Special Warfare, the U.S. State Department, and federal
-              and local law enforcement, training operators preparing for difficult environments.
+              The firm is led by Chase Welch, a United States Marine Corps combat veteran who 
+              served with 1st Battalion, 6th Marines and deployed twice to Afghanistan as an 0311. 
+              After leaving active duty, he spent more than a decade as a contractor supporting the 
+              Defense Intelligence Agency, Marine Corps Special Operations Command, Naval Special Warfare, 
+              the U.S. State Department, Defense Intelligence Agency, and federal and local law enforcement, 
+              training operators across domains and specialties.
             </p>
             <p>
-              From there he moved into the business side of the industry: business development,
-              marketing strategy, media production, and operational requirements analysis for
-              manufacturers across the defense, firearms, and aerospace sectors. In Extremis
-              Consulting brings that full arc to bear for its clients, from the end user's perspective
-              outward.
+              After leaving contracting, Chase grew his expertise in business development, marketing strategy, 
+              media production, brand representation, and operational requirements analysis for manufacturers 
+              across the defense, firearms, and aerospace sectors. In Extremis Consulting brings that full arc 
+              to bear for its clients, from the end user's perspective outward.
             </p>
             <p>
-              The belief behind the work is simple. The best decisions come from open exchange and
-              the disciplined comparison of ideas. Clarity of thinking, and the willingness to
-              challenge an assumption, usually matter more than conventional credentials. That is
-              what the firm offers: a clear-eyed partner who understands the product, the market,
-              and the people who depend on both.
+              The belief behind the work is simple. The best decisions come from open exchange and the disciplined comparison 
+              of ideas. Clarity of thinking and the willingness to challenge institutional doctrine can be the difference 
+              between a company succeeding or failing, or an end user living or dying. That is what the firm offers: 
+              a partner focused on the ground truth, who understands the product, the market, and the people who depend on both.
+
             </p>
           </div>
 

@@ -38,13 +38,11 @@ export default function HeroSection() {
         </p>
 
         <h1 className={`fade-rise fade-rise-2 ${styles.headline}`}>
-          The point of<br />the spear.
+        Dedication to the mission,<br />unto death.
         </h1>
 
         <p className={`fade-rise fade-rise-3 ${styles.subhead}`}>
-          Strategic advisory for the defense, firearms, and aerospace industries.
-          Two decades of hard-won experience, applied to the problems that decide
-          whether a company wins or fades.
+          Strategic advisory and business development for the defense, firearms, and aerospace industries. Two decades of hard-won experience, applied to the problems that decide the future of the industry. 
         </p>
 
         <div className={`fade-rise fade-rise-4 ${styles.cta}`}>
