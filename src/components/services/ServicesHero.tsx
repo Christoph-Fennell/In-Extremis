@@ -15,7 +15,6 @@ export default function ServicesHero() {
       {/* ── Background image ── */}
       <div className={styles.media} aria-hidden="true">
         {
-          REPLACE with:
           <Image
             src="/images/untitled-16.jpg"
             alt=""
