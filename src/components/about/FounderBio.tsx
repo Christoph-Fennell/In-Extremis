@@ -44,7 +44,7 @@ export default function FounderBio() {
               served with 1st Battalion, 6th Marines and deployed twice to Afghanistan as an 0311. 
               After leaving active duty, he spent more than a decade as a contractor supporting the 
               Defense Intelligence Agency, Marine Corps Special Operations Command, Naval Special Warfare, 
-              the U.S. State Department, Defense Intelligence Agency, and federal and local law enforcement, 
+              the U.S. State Department, and federal and local law enforcement, 
               training operators across domains and specialties.
             </p>
             <p>
