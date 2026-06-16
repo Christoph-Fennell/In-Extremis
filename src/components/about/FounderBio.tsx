@@ -41,7 +41,7 @@ export default function FounderBio() {
             </p>
             <p>
               The firm is led by Chase Welch, a United States Marine Corps combat veteran who 
-              served with 1st Battalion, 6th Marines and deployed twice to Afghanistan as an 0311. 
+              served with 1st Battalion, 6th Marines and deployed twice to Afghanistan as an 0311 (Infantry Rifleman MOS). 
               After leaving active duty, he spent more than a decade as a contractor supporting the 
               Defense Intelligence Agency, Marine Corps Special Operations Command, Naval Special Warfare, 
               the U.S. State Department, and federal and local law enforcement, 
