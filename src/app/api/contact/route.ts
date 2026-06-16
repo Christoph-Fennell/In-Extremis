@@ -1,26 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
 
-/**
- * CONTACT FORM API ROUTE
- *
- * This is a starting point. For production, connect to a transactional email
- * service so the form sends to your Google Workspace inbox.
- *
- * Recommended options:
- *   - Resend (resend.com) — simple, generous free tier
- *   - SendGrid
- *   - AWS SES
- *
- * Example with Resend:
- *   npm install resend
- *   import { Resend } from 'resend';
- *   const resend = new Resend(process.env.RESEND_API_KEY);
- *   await resend.emails.send({ from: ..., to: ..., subject: ..., text: ... });
- */
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-// Simple in-memory rate limit (resets on cold start — use Upstash Redis in production)
+// Simple in-memory rate limit
 const submissionMap = new Map<string, number>();
-const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minute
+const RATE_LIMIT_WINDOW_MS = 60_000;
 const MAX_SUBMISSIONS = 3;
 
 export async function POST(req: NextRequest) {
@@ -28,9 +13,9 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { name, email, company, message, _gotcha } = body;
 
-    // Honeypot — bot check
+    // Honeypot — silent pass for bots
     if (_gotcha) {
-      return NextResponse.json({ ok: true }); // Silent pass for bots
+      return NextResponse.json({ ok: true });
     }
 
     // Rate limiting by IP
@@ -52,27 +37,42 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid email.' }, { status: 400 });
     }
 
-    // ── TODO: Send email ─────────────────────────────────────────────────────
-    //
-    // Replace this block with your preferred email provider.
-    //
-    // const resend = new Resend(process.env.RESEND_API_KEY);
-    // await resend.emails.send({
-    //   from: 'In Extremis Website <noreply@inextremisconsulting.com.com>',
-    //   to: 'chase@inextremisconsulting.com.com',
-    //   replyTo: email,
-    //   subject: `New inquiry from ${name}${company ? ` at ${company}` : ''}`,
-    //   text: `Name: ${name}\nEmail: ${email}\nCompany: ${company || 'N/A'}\n\n${message}`,
-    // });
-    //
-    // ────────────────────────────────────────────────────────────────────────
-
-    // Log in development
-    if (process.env.NODE_ENV !== 'production') {
-      console.log('[Contact Form]', { name, email, company, message });
-    }
+    // Send email via Resend
+    await resend.emails.send({
+      from: 'In Extremis Consulting <noreply@inextremisconsulting.com>',
+      to: process.env.CONTACT_EMAIL ?? 'chase@inextremisconsulting.com',
+      replyTo: email,
+      subject: `New inquiry from ${name}${company ? ` at ${company}` : ''}`,
+      html: `
+        <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 2rem; background: #0C0C0D; color: #ECE6D8;">
+          <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: #ECE6D8;">New Inquiry</h2>
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+              <td style="padding: 0.5rem 0; color: #8A1815; font-family: monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; width: 100px;">Name</td>
+              <td style="padding: 0.5rem 0; color: #ECE6D8;">${name}</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.5rem 0; color: #8A1815; font-family: monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;">Email</td>
+              <td style="padding: 0.5rem 0; color: #ECE6D8;"><a href="mailto:${email}" style="color: #8A1815;">${email}</a></td>
+            </tr>
+            ${company ? `
+            <tr>
+              <td style="padding: 0.5rem 0; color: #8A1815; font-family: monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;">Company</td>
+              <td style="padding: 0.5rem 0; color: #ECE6D8;">${company}</td>
+            </tr>` : ''}
+          </table>
+          <hr style="border: none; border-top: 1px solid rgba(236,230,216,0.1); margin: 1.5rem 0;" />
+          <p style="color: #8A1815; font-family: monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">Message</p>
+          <p style="color: #ECE6D8; line-height: 1.7; white-space: pre-wrap;">${message}</p>
+          <hr style="border: none; border-top: 1px solid rgba(236,230,216,0.1); margin: 1.5rem 0;" />
+          <p style="color: #ECE6D8; opacity: 0.3; font-family: monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em;">Sent via inextremisconsulting.com</p>
+        </div>
+      `,
+      text: `New inquiry from ${name}${company ? ` at ${company}` : ''}\n\nName: ${name}\nEmail: ${email}${company ? `\nCompany: ${company}` : ''}\n\nMessage:\n${message}`,
+    });
 
     return NextResponse.json({ ok: true });
+
   } catch (err) {
     console.error('[Contact Form Error]', err);
     return NextResponse.json({ error: 'Server error.' }, { status: 500 });
