@@ -18,7 +18,7 @@ const services = [
   },
   {
     number: '03',
-    title: 'Media Production & Content',
+    title: 'Media Direction & Production Management',
     body: 'Logistics and Planning support for photography, video, and content strategy and production that meets the standard this industry expects. Managed and art-directed end to end, collaborating with trusted production partners.',
     icon: '▣',
   },
