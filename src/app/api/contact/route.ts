@@ -58,8 +58,8 @@ export async function POST(req: NextRequest) {
     //
     // const resend = new Resend(process.env.RESEND_API_KEY);
     // await resend.emails.send({
-    //   from: 'In Extremis Website <noreply@in-extremis.com>',
-    //   to: 'chase@in-extremis.com',
+    //   from: 'In Extremis Website <noreply@inextremisconsulting.com.com>',
+    //   to: 'chase@inextremisconsulting.com.com',
     //   replyTo: email,
     //   subject: `New inquiry from ${name}${company ? ` at ${company}` : ''}`,
     //   text: `Name: ${name}\nEmail: ${email}\nCompany: ${company || 'N/A'}\n\n${message}`,

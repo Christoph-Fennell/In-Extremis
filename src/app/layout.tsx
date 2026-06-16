@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'Strategic advisory for the defense, firearms, and aerospace industries. Two decades of hard-won experience, applied to the problems that decide whether a company wins or fades.',
   openGraph: {
     type: 'website',
-    url: 'https://in-extremis.com',
+    url: 'https://inextremisconsulting.com.com',
     siteName: 'In Extremis Consulting',
     images: [{ url: '/og-share.png', width: 1200, height: 630 }],
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     ],
     apple: '/icons/apple-touch-icon.png',
   },
-  metadataBase: new URL('https://in-extremis.com'),
+  metadataBase: new URL('https://inextremisconsulting.com.com'),
 };
 
 export default function RootLayout({

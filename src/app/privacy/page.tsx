@@ -26,7 +26,7 @@ export default function PrivacyPage() {
           </p>
           <p>
             If you have questions about this notice, contact us at{' '}
-            <a href="mailto:chase@in-extremis.com">chase@in-extremis.com</a>.
+            <a href="mailto:welch778@gmail.com">welch778@gmail.com</a>.
           </p>
           <p className={styles.updated}>Last updated: 2026</p>
         </div>

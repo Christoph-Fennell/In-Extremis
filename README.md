@@ -1,6 +1,6 @@
 # In Extremis Consulting — Website
 
-**in-extremis.com** · Next.js 15 · TypeScript · CSS Modules
+**inextremisconsulting.com.com** · Next.js 15 · TypeScript · CSS Modules
 
 ---
 
@@ -8,7 +8,7 @@
 
 ```bash
 # 1. Clone / unzip the repo
-cd in-extremis
+cd inextremisconsulting.com
 
 # 2. Install dependencies
 npm install
@@ -172,7 +172,7 @@ The form POSTs to `/api/contact`. To actually send emails:
 4. Add to `.env.local`:
    ```
    RESEND_API_KEY=re_xxxxxxxxxxxx
-   CONTACT_EMAIL=chase@in-extremis.com
+   CONTACT_EMAIL=chase@inextremisconsulting.com.com
    ```
 5. Uncomment the Resend block in `src/app/api/contact/route.ts`
 
@@ -182,14 +182,14 @@ The form POSTs to `/api/contact`. To actually send emails:
 
 From the design brief — check these before going live:
 
-- [ ] Confirm final contact email (`chase@in-extremis.com`)
+- [ ] Confirm final contact email (`chase@inextremisconsulting.com.com`)
 - [ ] Confirm which social profiles are live — remove dead links from `Footer.tsx`
 - [ ] Provide and place all media (hero video/still, what-we-do, media moment, about hero, portrait)
 - [ ] Provide approved client logos for the logo strip (or confirm "no logos yet")
 - [ ] Connect contact form to email provider
 - [ ] Add OG share image (`public/og-share.png`, 1200×630px) using primary lockup
 - [ ] Generate and place favicon set (`public/icons/favicon-16.png`, `-32.png`, `-64.png`, `-192.png`, `-512.png`, `apple-touch-icon.png`)
-- [ ] Point `in-extremis.com` DNS to host
+- [ ] Point `inextremisconsulting.com.com` DNS to host
 - [ ] Confirm Google Workspace MX records won't conflict with form mail routing
 
 ---
