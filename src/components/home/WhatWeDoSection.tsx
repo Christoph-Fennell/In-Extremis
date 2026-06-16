@@ -42,7 +42,7 @@ export default function WhatWeDoSection() {
             <p>
               We are not a large agency, and we do not pretend to be. We are focused, dedicated to the mission, 
               and are always working to improve the end users' knowledge, lethality, and mission success rate. 
-              This builds trust in the brands we partner with by building trust, ground up, with their end users. 
+              This builds trust in the brands we partner with by earning it, ground up, from their end users.
             </p>
           </div>
         </div>
