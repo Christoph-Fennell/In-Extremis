@@ -28,8 +28,8 @@ export default function Footer() {
           <h3 className={styles.zoneLabel}>Contact</h3>
           <ul className={styles.contactList}>
             <li>
-              <a href="mailto:welch778@gmail.com" className={styles.contactLink}>
-                welch778@gmail.com
+              <a href="mailto:chase@inextremisconsulting.com" className={styles.contactLink}>
+                chase@inextremisconsulting.com
               </a>
             </li>
             {/* Add phone number here when confirmed */}
