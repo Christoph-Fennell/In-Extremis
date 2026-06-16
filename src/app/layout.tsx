@@ -18,9 +18,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/icons/favicon-16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/icons/favicon-32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/icons/favicon-64.png', sizes: '64x64', type: 'image/png' },
+      { url: '/icons/10_favicon_16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/icons/09_favicon_32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icons/08_favicon_64.png', sizes: '64x64', type: 'image/png' },
+      { url: '/icons/07_favicon_192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icons/05_mark_only.png', sizes: '800x800', type: 'image/png' },
+      { url: '/icons/06_favicon_512.png', sizes: '512x512', type: 'image/png' },
     ],
     apple: '/icons/apple-touch-icon.png',
   },

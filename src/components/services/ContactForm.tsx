@@ -200,7 +200,7 @@ export default function ContactForm() {
             {formState === 'error' && (
               <p className={styles.globalError} role="alert">
                 Something went wrong. Please try again or email{' '}
-                <a href="mailto:chase@in-extremis.com">chase@in-extremis.com</a>.
+                <a href="mailto:welch778@gmail.com">welch778@gmail.com</a>.
               </p>
             )}
 
