@@ -6,6 +6,7 @@ const socialLinks = [
   { label: 'Instagram', href: 'https://instagram.com/in_extremis_consulting', icon: InstagramIcon },
   { label: 'X',         href: 'https://x.com/inextremisbis?s=11',         icon: XIcon         },
   { label: 'YouTube',   href: 'https://youtube.com',   icon: YouTubeIcon   },
+  { label: 'Facebook',  href: 'https://facebook.com/inextremisconsulting'   icon: FacebookIcon   }, 
 ];
 
 export default function Footer() {
@@ -107,6 +108,14 @@ function YouTubeIcon() {
   return (
     <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
+    </svg>
+  );
+}
+
+function FacebookIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
     </svg>
   );
 }
