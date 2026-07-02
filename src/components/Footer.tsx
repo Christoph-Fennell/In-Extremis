@@ -6,7 +6,7 @@ const socialLinks = [
   { label: 'Instagram', href: 'https://instagram.com/in_extremis_consulting', icon: InstagramIcon },
   { label: 'X',         href: 'https://x.com/inextremisbis?s=11',         icon: XIcon         },
   { label: 'YouTube',   href: 'https://youtube.com',   icon: YouTubeIcon   },
-  { label: 'Facebook',  href: 'https://facebook.com/inextremisconsulting'   icon: FacebookIcon   }, 
+  { label: 'Facebook',  href: 'https://facebook.com/inextremisconsulting',   icon: FacebookIcon   }, 
 ];
 
 export default function Footer() {
