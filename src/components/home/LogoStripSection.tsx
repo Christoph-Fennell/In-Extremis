@@ -22,6 +22,7 @@ const logos: LogoItem[] = [
   { name: 'Client 7', src: '/images/logos/Genesis_Arms_idUm8MTAPu_1.png', width: 200, height: 90 },
   { name: 'Client 8', src: '/images/logos/idJb1-CMvA_logos.png', width: 200, height: 90 },
   { name: 'Client 9', src: '/images/logos/idqHfeLLxT_logos.png', width: 200, height: 90 },
+  { name: 'Client 10', src: '/images/logos/Globe_Text_B3_raster.png', width: 200, height: 90 },
 ];
 // ────────────────────────────────────────────────────────────
 
